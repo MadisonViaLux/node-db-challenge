@@ -7,7 +7,7 @@ exports.up = function(knex) {
             .unique()
             .notNullable();
         tbl.text('description')
-        tbl.boolean('completed', false)
+        tbl.boolean('completed')
     })
     .createTable('resource', tbl => {
         tbl.increments()
@@ -20,8 +20,8 @@ exports.up = function(knex) {
         tbl.increments()
         tbl.text('description')
             .notNullable()
-        tbl.text('Additional Information')
-        tbl.boolean('completed', false)
+        tbl.text('AddedInfo')
+        tbl.boolean('completed')
     })
 };
 
